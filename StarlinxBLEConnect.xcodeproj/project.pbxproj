@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		94D095032781186D005373BD /* StarlinxBLEConnect-universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 94D095062781186D005373BD /* Build configuration list for PBXAggregateTarget "StarlinxBLEConnect-universal" */;
+			buildPhases = (
+				94D0950727811887005373BD /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "StarlinxBLEConnect-universal";
+			productName = "StarlinxBLEConnect-universal";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		94D094CA2780D36F005373BD /* StarlinxBLEConnect.docc in Sources */ = {isa = PBXBuildFile; fileRef = 94D094C92780D36F005373BD /* StarlinxBLEConnect.docc */; };
+		94D094D02780D36F005373BD /* StarlinxBLEConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D094C52780D36F005373BD /* StarlinxBLEConnect.framework */; };
+		94D094D52780D36F005373BD /* StarlinxBLEConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D094D42780D36F005373BD /* StarlinxBLEConnectTests.swift */; };
+		94D094D62780D36F005373BD /* StarlinxBLEConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 94D094C82780D36F005373BD /* StarlinxBLEConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94D094EC2780D4E9005373BD /* UpdateTagVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D094E92780D4E8005373BD /* UpdateTagVersion.swift */; };
+		94D094ED2780D4E9005373BD /* TagManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D094EA2780D4E8005373BD /* TagManagerProtocol.swift */; };
+		94D094EE2780D4E9005373BD /* TagManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D094EB2780D4E8005373BD /* TagManager.swift */; };
+		94D094F12780D4F4005373BD /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D094EF2780D4F3005373BD /* LogHelper.swift */; };
+		94D094F22780D4F4005373BD /* DiscoveredPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D094F02780D4F3005373BD /* DiscoveredPeripheral.swift */; };
+		94D094FC2780DCFB005373BD /* NordicDFU in Frameworks */ = {isa = PBXBuildFile; productRef = 94D094FB2780DCFB005373BD /* NordicDFU */; };
+		94F6E4862781A86600756374 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 94F6E4852781A86600756374 /* Reachability */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94D094D12780D36F005373BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94D094BC2780D36F005373BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94D094C42780D36F005373BD;
+			remoteInfo = StarlinxBLEConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		94D094C52780D36F005373BD /* StarlinxBLEConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarlinxBLEConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D094C82780D36F005373BD /* StarlinxBLEConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarlinxBLEConnect.h; sourceTree = "<group>"; };
+		94D094C92780D36F005373BD /* StarlinxBLEConnect.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StarlinxBLEConnect.docc; sourceTree = "<group>"; };
+		94D094CF2780D36F005373BD /* StarlinxBLEConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarlinxBLEConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D094D42780D36F005373BD /* StarlinxBLEConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarlinxBLEConnectTests.swift; sourceTree = "<group>"; };
+		94D094E92780D4E8005373BD /* UpdateTagVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTagVersion.swift; sourceTree = "<group>"; };
+		94D094EA2780D4E8005373BD /* TagManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagManagerProtocol.swift; sourceTree = "<group>"; };
+		94D094EB2780D4E8005373BD /* TagManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagManager.swift; sourceTree = "<group>"; };
+		94D094EF2780D4F3005373BD /* LogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
+		94D094F02780D4F3005373BD /* DiscoveredPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredPeripheral.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94D094C22780D36F005373BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D094FC2780DCFB005373BD /* NordicDFU in Frameworks */,
+				94F6E4862781A86600756374 /* Reachability in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D094CC2780D36F005373BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D094D02780D36F005373BD /* StarlinxBLEConnect.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94D094BB2780D36F005373BD = {
+			isa = PBXGroup;
+			children = (
+				94D094C72780D36F005373BD /* StarlinxBLEConnect */,
+				94D094D32780D36F005373BD /* StarlinxBLEConnectTests */,
+				94D094C62780D36F005373BD /* Products */,
+				94D094FA2780DCFB005373BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		94D094C62780D36F005373BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94D094C52780D36F005373BD /* StarlinxBLEConnect.framework */,
+				94D094CF2780D36F005373BD /* StarlinxBLEConnectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94D094C72780D36F005373BD /* StarlinxBLEConnect */ = {
+			isa = PBXGroup;
+			children = (
+				94D094C82780D36F005373BD /* StarlinxBLEConnect.h */,
+				94D094EB2780D4E8005373BD /* TagManager.swift */,
+				94D094EA2780D4E8005373BD /* TagManagerProtocol.swift */,
+				94D094E92780D4E8005373BD /* UpdateTagVersion.swift */,
+				94D094F02780D4F3005373BD /* DiscoveredPeripheral.swift */,
+				94D094EF2780D4F3005373BD /* LogHelper.swift */,
+				94D094C92780D36F005373BD /* StarlinxBLEConnect.docc */,
+			);
+			path = StarlinxBLEConnect;
+			sourceTree = "<group>";
+		};
+		94D094D32780D36F005373BD /* StarlinxBLEConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				94D094D42780D36F005373BD /* StarlinxBLEConnectTests.swift */,
+			);
+			path = StarlinxBLEConnectTests;
+			sourceTree = "<group>";
+		};
+		94D094FA2780DCFB005373BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		94D094C02780D36F005373BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D094D62780D36F005373BD /* StarlinxBLEConnect.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		94D094C42780D36F005373BD /* StarlinxBLEConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D094D92780D36F005373BD /* Build configuration list for PBXNativeTarget "StarlinxBLEConnect" */;
+			buildPhases = (
+				94D094C02780D36F005373BD /* Headers */,
+				94D094C12780D36F005373BD /* Sources */,
+				94D094C22780D36F005373BD /* Frameworks */,
+				94D094C32780D36F005373BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				940972322781A3E6002015B7 /* PBXTargetDependency */,
+			);
+			name = StarlinxBLEConnect;
+			packageProductDependencies = (
+				94D094FB2780DCFB005373BD /* NordicDFU */,
+				94F6E4852781A86600756374 /* Reachability */,
+			);
+			productName = StarlinxBLEConnect;
+			productReference = 94D094C52780D36F005373BD /* StarlinxBLEConnect.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		94D094CE2780D36F005373BD /* StarlinxBLEConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D094DC2780D36F005373BD /* Build configuration list for PBXNativeTarget "StarlinxBLEConnectTests" */;
+			buildPhases = (
+				94D094CB2780D36F005373BD /* Sources */,
+				94D094CC2780D36F005373BD /* Frameworks */,
+				94D094CD2780D36F005373BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94D094D22780D36F005373BD /* PBXTargetDependency */,
+			);
+			name = StarlinxBLEConnectTests;
+			productName = StarlinxBLEConnectTests;
+			productReference = 94D094CF2780D36F005373BD /* StarlinxBLEConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94D094BC2780D36F005373BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					94D094C42780D36F005373BD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					94D094CE2780D36F005373BD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					94D095032781186D005373BD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 94D094BF2780D36F005373BD /* Build configuration list for PBXProject "StarlinxBLEConnect" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94D094BB2780D36F005373BD;
+			packageReferences = (
+				94D094F32780D52A005373BD /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */,
+				94D094FD2780E40C005373BD /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
+			productRefGroup = 94D094C62780D36F005373BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94D094C42780D36F005373BD /* StarlinxBLEConnect */,
+				94D094CE2780D36F005373BD /* StarlinxBLEConnectTests */,
+				94D095032781186D005373BD /* StarlinxBLEConnect-universal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94D094C32780D36F005373BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D094CD2780D36F005373BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		94D0950727811887005373BD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"project\"\n#open \"${PROJECT_DIR}\"\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: Detected, stopping\"\nelse\nexport ALREADYINVOKED=\"true\"\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-iosuniversal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\necho \"iphone\"\nxcodebuild -target \"${TARGET_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" build\necho \"iphonesim\"\nxcodebuild -target \"${TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" build\n\n## Step 2. Copy the framework structure (from iphoneos build) to the universal folder\necho \"universal\"\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\necho \"iphone simulator path\"\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\necho \"lipo create\"\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\necho \"end\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94D094C12780D36F005373BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D094EC2780D4E9005373BD /* UpdateTagVersion.swift in Sources */,
+				94D094F22780D4F4005373BD /* DiscoveredPeripheral.swift in Sources */,
+				94D094F12780D4F4005373BD /* LogHelper.swift in Sources */,
+				94D094CA2780D36F005373BD /* StarlinxBLEConnect.docc in Sources */,
+				94D094EE2780D4E9005373BD /* TagManager.swift in Sources */,
+				94D094ED2780D4E9005373BD /* TagManagerProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D094CB2780D36F005373BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D094D52780D36F005373BD /* StarlinxBLEConnectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		940972322781A3E6002015B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 940972312781A3E6002015B7 /* NordicDFU */;
+		};
+		94D094D22780D36F005373BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94D094C42780D36F005373BD /* StarlinxBLEConnect */;
+			targetProxy = 94D094D12780D36F005373BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		94D094D72780D36F005373BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		94D094D82780D36F005373BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		94D094DA2780D36F005373BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 364VQ9278J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BC.StarlinxBLEConnect;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94D094DB2780D36F005373BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 364VQ9278J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BC.StarlinxBLEConnect;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		94D094DD2780D36F005373BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364VQ9278J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BC.StarlinxBLEConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94D094DE2780D36F005373BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364VQ9278J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BC.StarlinxBLEConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		94D095042781186D005373BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 364VQ9278J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		94D095052781186D005373BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 364VQ9278J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94D094BF2780D36F005373BD /* Build configuration list for PBXProject "StarlinxBLEConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D094D72780D36F005373BD /* Debug */,
+				94D094D82780D36F005373BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94D094D92780D36F005373BD /* Build configuration list for PBXNativeTarget "StarlinxBLEConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D094DA2780D36F005373BD /* Debug */,
+				94D094DB2780D36F005373BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94D094DC2780D36F005373BD /* Build configuration list for PBXNativeTarget "StarlinxBLEConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D094DD2780D36F005373BD /* Debug */,
+				94D094DE2780D36F005373BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94D095062781186D005373BD /* Build configuration list for PBXAggregateTarget "StarlinxBLEConnect-universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D095042781186D005373BD /* Debug */,
+				94D095052781186D005373BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94D094F32780D52A005373BD /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NordicSemiconductor/IOS-DFU-Library";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		94D094FD2780E40C005373BD /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		940972312781A3E6002015B7 /* NordicDFU */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94D094F32780D52A005373BD /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */;
+			productName = NordicDFU;
+		};
+		94D094FB2780DCFB005373BD /* NordicDFU */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94D094F32780D52A005373BD /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */;
+			productName = NordicDFU;
+		};
+		94F6E4852781A86600756374 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94D094FD2780E40C005373BD /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 94D094BC2780D36F005373BD /* Project object */;
+}
