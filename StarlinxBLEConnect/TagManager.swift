@@ -248,12 +248,7 @@ extension TagManager: CBCentralManagerDelegate {
         
         LogHelper.logError(err: "peripheral didFailToConnect")
         connected = false
-
-        if UIApplication.shared.applicationState == .background && reconnectCount < 4 {
-//            self.tryReconnect(central, to: peripheral)
-        } else {
-            delegate?.didChangeStatus(state: .disconnected)
-        }
+        delegate?.didChangeStatus(state: .disconnected)
     }
     
     public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
@@ -279,16 +274,16 @@ extension TagManager: CBCentralManagerDelegate {
         delegate?.didDisconnect()
         delegate?.didChangeStatus(state: .disconnected)
         
-        if UIApplication.shared.applicationState == .background && reconnectCount < 4 {
+//        if UIApplication.shared.applicationState == .background && reconnectCount < 4 {
 //            self.tryReconnect(central, to: peripheral)
-        } else {
+//        } else {
             var discoveredPeripheral = discoveredPeripherals.first(where: { $0.basePeripheral.identifier == peripheral.identifier })
             if discoveredPeripheral == nil {
                 discoveredPeripheral = DiscoveredPeripheral(peripheral)
                 discoveredPeripherals.append(discoveredPeripheral!)
                 self.peripheral = discoveredPeripheral
             }
-        }
+//        }
     }
     
     
