@@ -6,20 +6,6 @@
 	objectVersion = 55;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		94D095032781186D005373BD /* StarlinxBLEConnect-universal */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 94D095062781186D005373BD /* Build configuration list for PBXAggregateTarget "StarlinxBLEConnect-universal" */;
-			buildPhases = (
-				94D0950727811887005373BD /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "StarlinxBLEConnect-universal";
-			productName = "StarlinxBLEConnect-universal";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		94D094CA2780D36F005373BD /* StarlinxBLEConnect.docc in Sources */ = {isa = PBXBuildFile; fileRef = 94D094C92780D36F005373BD /* StarlinxBLEConnect.docc */; };
 		94D094D02780D36F005373BD /* StarlinxBLEConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D094C52780D36F005373BD /* StarlinxBLEConnect.framework */; };
@@ -197,9 +183,6 @@
 					94D094CE2780D36F005373BD = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					94D095032781186D005373BD = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
 				};
 			};
 			buildConfigurationList = 94D094BF2780D36F005373BD /* Build configuration list for PBXProject "StarlinxBLEConnect" */;
@@ -221,7 +204,6 @@
 			targets = (
 				94D094C42780D36F005373BD /* StarlinxBLEConnect */,
 				94D094CE2780D36F005373BD /* StarlinxBLEConnectTests */,
-				94D095032781186D005373BD /* StarlinxBLEConnect-universal */,
 			);
 		};
 /* End PBXProject section */
@@ -242,26 +224,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		94D0950727811887005373BD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo \"project\"\n#open \"${PROJECT_DIR}\"\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: Detected, stopping\"\nelse\nexport ALREADYINVOKED=\"true\"\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-iosuniversal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\necho \"iphone\"\nxcodebuild -target \"${TARGET_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" build\necho \"iphonesim\"\nxcodebuild -target \"${TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" build\n\n## Step 2. Copy the framework structure (from iphoneos build) to the universal folder\necho \"universal\"\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\necho \"iphone simulator path\"\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\necho \"lipo create\"\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\necho \"end\"\nfi\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94D094C12780D36F005373BD /* Sources */ = {
@@ -303,6 +265,7 @@
 		94D094D72780D36F005373BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -367,6 +330,7 @@
 		94D094D82780D36F005373BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -518,24 +482,6 @@
 			};
 			name = Release;
 		};
-		94D095042781186D005373BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 364VQ9278J;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		94D095052781186D005373BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 364VQ9278J;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -562,15 +508,6 @@
 			buildConfigurations = (
 				94D094DD2780D36F005373BD /* Debug */,
 				94D094DE2780D36F005373BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94D095062781186D005373BD /* Build configuration list for PBXAggregateTarget "StarlinxBLEConnect-universal" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94D095042781186D005373BD /* Debug */,
-				94D095052781186D005373BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XeEklaikdOUTxgOY+QM91BtC+Bo=
+		M69KGCSTC5Z9Hhj/F7LcAVx/9vA=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		XeEklaikdOUTxgOY+QM91BtC+Bo=
+		M69KGCSTC5Z9Hhj/F7LcAVx/9vA=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RYHZ4jExx3sLci0T7VO4d2tUWHI=
+		VHO3T4L/z7sa30l0M3Hg+VA6XaM=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		RYHZ4jExx3sLci0T7VO4d2tUWHI=
+		VHO3T4L/z7sa30l0M3Hg+VA6XaM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -103,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jXezajYqedmL6R2fOEbFfOgAKoclrmyUmMi+OseH5Hc=
+			hPfCXTBRPXC4w1dF7YqI3zjK0MOpkm6y9sz9mrPKKQc=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftdoc</key>
@@ -124,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jXezajYqedmL6R2fOEbFfOgAKoclrmyUmMi+OseH5Hc=
+			hPfCXTBRPXC4w1dF7YqI3zjK0MOpkm6y9sz9mrPKKQc=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -145,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cJ5JHdFuesu1TxS8K3vj8c/MlAI9msFpyPK6VUWvqYs=
+			z5XmvKOc+tjZep7y97XDQupcruYpgqwN+24jUOOIpbY=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftdoc</key>
@@ -166,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cJ5JHdFuesu1TxS8K3vj8c/MlAI9msFpyPK6VUWvqYs=
+			z5XmvKOc+tjZep7y97XDQupcruYpgqwN+24jUOOIpbY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
