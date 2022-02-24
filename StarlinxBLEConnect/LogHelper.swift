@@ -18,7 +18,7 @@ extension Logger {
 
 public struct LogHelper {
     //MARK: - LOG
-    static func logError(err: String) {
+    public static func logError(err: String) {
         if #available(iOS 14.0, *) {
             Logger.viewCycle.error("\(err, privacy: .public)")
         } else {
@@ -26,7 +26,7 @@ public struct LogHelper {
         }
     }
     
-    static func logInfo(message: String) {
+    public static func logInfo(message: String) {
         if #available(iOS 14.0, *) {
             Logger.viewCycle.info("\(message)")
         } else {
@@ -34,7 +34,7 @@ public struct LogHelper {
         }
     }
     
-    static func logDebug(message: String) {
+    public static func logDebug(message: String) {
         if #available(iOS 14.0, *) {
             Logger.viewCycle.debug("\(message, privacy: .public)")
         } else {
