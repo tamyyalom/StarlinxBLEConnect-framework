@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreBluetooth
+import SwiftUI
 
 public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPeripheralDelegate, UpdateTagVersionProtocol {
     
@@ -14,9 +15,10 @@ public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPe
     public var connected = false
     
     public weak var delegate: TagManagerProtocol?
+    
     private var peripheralP: CBPeripheral!
-    private var UUIDService: CBUUID?
-    private var UUIDCharacteristics: CBUUID?
+    private var UUIDService = [CBUUID]()
+    private var UUIDCharacteristics = [CBUUID]()
     var peripheral: DiscoveredPeripheral!
     private var discoveredPeripherals = [DiscoveredPeripheral]()
     private var filteredPeripherals = [DiscoveredPeripheral]()
@@ -27,21 +29,14 @@ public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPe
     var timerForScanning: Timer?
     var reconnectCount = 0
     
-    public func start(serviceKey: String, characteristicKey: String, deviceId: String, completionHandler: @escaping (_ succes: Bool, _ message: String) -> Void) {
+    public func start(uuidModels: [UUIDModel], lastConnectedSensor: UUIDModel, completionHandler: @escaping (_ succes: Bool, _ message: String) -> Void) {
         
-        centralManager = CBCentralManager(delegate: self, queue: nil/*, options: [CBCentralManagerOptionRestoreIdentifierKey: device_id]*/)
+        centralManager = CBCentralManager(delegate: self, queue: nil/*, options: [CBCentralManagerOptionRestoreIdentifierKey: lastConnectedSensor.getServiceKeyWithDevice()]*/)
 
-        let deviceKey = deviceId.suffix(12)
-        let serviceId = serviceKey + deviceKey
-        let characteristics = characteristicKey + deviceKey
-        UUIDService = CBUUID(string: serviceId)
-        UUIDCharacteristics = CBUUID(string: characteristics)
+        initialServices(uuidModels: uuidModels)
         
         let permission = checkPermission()
         if permission == .allowedAlways {
-            
-            centralManager.scanForPeripherals(withServices: [UUIDService!], options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
-            
             completionHandler(true, "")
         } else {
             var message = String()
@@ -58,6 +53,18 @@ public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPe
             LogHelper.logError(err: message)
             completionHandler(false, message)
         }
+    }
+    
+    private func initialServices(uuidModels: [UUIDModel]) {
+        UUIDService.removeAll()
+        UUIDCharacteristics.removeAll()
+        
+        for uuidModel in uuidModels {
+            UUIDService.append(CBUUID(string: uuidModel.getServiceKeyWithDevice()))
+            UUIDCharacteristics.append(CBUUID(string: uuidModel.getCharacteristicsKeyWithDevice()))
+        }
+        LogHelper.logError(err: "UUIDService: \(UUIDService)")
+        print(UUIDService)
     }
     
     public func updateTagVersion(url: String) {
@@ -103,20 +110,11 @@ public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPe
             backgroundTaskId = .invalid
             timerForScanning?.invalidate()
             timerForScanning = nil
-            delegate?.didChangeStatus(state: .disconnected)
+            delegate?.didChangeStatus(state: .disconnected, deviceId: "")
         }
     }
     
     public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        // Check for error.
-        guard error == nil else {
-            //            lock.open(error)
-            return
-        }
-        
-        let s = peripheral.services?.map({ $0.uuid.uuidString }).joined(separator: ", ")
-            ?? "none"
-        LogHelper.logDebug(message: "Services discovered: \(s)")
         
         // Get peripheral's services.
         guard let services = peripheral.services else {
@@ -124,10 +122,13 @@ public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPe
         }
         // Find the service matching the SMP service UUID.
         for service in services {
-            if service.uuid == UUIDService {
-                peripheral.discoverCharacteristics([UUIDCharacteristics!], for: service)
-                return
+            let index = UUIDService.firstIndex(of: service.uuid)
+            guard let index = index else {
+                continue
             }
+            
+            peripheral.discoverCharacteristics([UUIDCharacteristics[index]], for: service)
+            return
         }
     }
     
@@ -140,31 +141,40 @@ public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPe
         
         // Find the characteristic matching the SMP characteristic UUID.
         for characteristic in characteristics {
-            if characteristic.uuid == UUIDCharacteristics {
-                if ((characteristic.properties.contains(.notify))) {
-                    peripheral.setNotifyValue(true, for: characteristic)
-                    //Do your Write here
-                }
-                if characteristic.properties.contains(.write) {
-                    peripheral.writeValue(Data([1]), for: characteristic, type: .withResponse)
-                    connected = true
-                    reconnectCount = 0
-           
-                    delegate?.didChangeStatus(state: .connected)
-                }
-                return
+            
+            guard let index = UUIDCharacteristics.firstIndex(of: characteristic.uuid) else {
+                continue
             }
+            
+            if ((characteristic.properties.contains(.notify))) {
+                peripheral.setNotifyValue(true, for: characteristic)
+                //Do your Write here
+            }
+            if characteristic.properties.contains(.write) {
+                peripheral.writeValue(Data([1]), for: characteristic, type: .withResponse)
+                connected = true
+                reconnectCount = 0
+                
+                let deviceId = String(UUIDCharacteristics[index].uuidString.suffix(12))
+                delegate?.didChangeStatus(state: .connected, deviceId: deviceId)
+            }
+            return
         }
     }
     
     public func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic,
                            error: Error?) {
         
-        guard characteristic.uuid == UUIDCharacteristics, error == nil else { return }
+        guard error == nil else { return }
+
+        guard let index = UUIDCharacteristics.firstIndex(of: characteristic.uuid) else {
+            return
+        }
 
         connected = true
         reconnectCount = 0
-        delegate?.didChangeStatus(state: .connected)
+        let deviceId = String(UUIDCharacteristics[index].uuidString.suffix(12))
+        delegate?.didChangeStatus(state: .connected, deviceId: deviceId)
         
     }
     
@@ -178,12 +188,16 @@ public class TagManager: NSObject, UIPopoverPresentationControllerDelegate, CBPe
     
     public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         
-        guard characteristic.uuid == UUIDCharacteristics, error == nil else { return }
+        guard error == nil else { return }
+
+        guard (UUIDCharacteristics.firstIndex(of: characteristic.uuid) != nil) else {
+            return
+        }
         
         guard let data = characteristic.value else { return }
         
         delegate?.readTagValue(data: data)
-        print(data)
+        print("readTagValue: \(data)")
     }
 }
 
@@ -197,6 +211,8 @@ extension TagManager: CBCentralManagerDelegate {
         var discoveredPeripheral = discoveredPeripherals.first(where: { $0.basePeripheral.identifier == peripheral.identifier })
         
         discoveredPeripheral = DiscoveredPeripheral(peripheral)
+        guard !discoveredPeripherals.contains(discoveredPeripheral!) else { return }
+        
         discoveredPeripherals.append(discoveredPeripheral!)
         self.peripheral = discoveredPeripheral
         print(peripheral)
@@ -222,9 +238,10 @@ extension TagManager: CBCentralManagerDelegate {
                 centralManager.stopScan()
                 
                 connected = true
-                delegate?.didChangeStatus(state: .connected)
+                let deviceId = String(self.peripheral.basePeripheral.identifier.uuidString.suffix(12))
+                delegate?.didChangeStatus(state: .connected, deviceId: deviceId)
                 
-                peripheral.discoverServices([UUIDService!])
+                peripheral.discoverServices(UUIDService)
                 central.connect(peripheral, options: nil)
             }
         }
@@ -236,11 +253,10 @@ extension TagManager: CBCentralManagerDelegate {
         print(peripheral)
         centralManager.stopScan()
         
-        delegate?.didChangeStatus(state: .connecting)
+        let deviceId = String(peripheral.identifier.uuidString.suffix(12))
+        delegate?.didChangeStatus(state: .connecting, deviceId: deviceId)
         peripheral.delegate = self
-        if let UUIDService = UUIDService {
-            peripheral.discoverServices([UUIDService])
-        }
+        peripheral.discoverServices(UUIDService)
     }
     
     
@@ -248,7 +264,8 @@ extension TagManager: CBCentralManagerDelegate {
         
         LogHelper.logError(err: "peripheral didFailToConnect")
         connected = false
-        delegate?.didChangeStatus(state: .disconnected)
+        let deviceId = String(peripheral.identifier.uuidString.suffix(12))
+        delegate?.didChangeStatus(state: .disconnected, deviceId: deviceId)
     }
     
     public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
@@ -260,19 +277,13 @@ extension TagManager: CBCentralManagerDelegate {
         LogHelper.logError(err: "\(cbError.localizedDescription)!!!!!!!!!!")
         
         if cbError.code == .peripheralDisconnected || cbError.code == .connectionTimeout {
-            
             centralManager = nil
-            
-        } else {
-            let name = UUIDService?.uuidString
-            if cbError.code == .unknown && peripheral.name == name {
-                central.connect(peripheral, options: nil)
-            }
         }
         
+        let deviceId = String(peripheral.identifier.uuidString.suffix(12))
         connected = false
         delegate?.didDisconnect()
-        delegate?.didChangeStatus(state: .disconnected)
+        delegate?.didChangeStatus(state: .disconnected, deviceId: deviceId)
         
 //        if UIApplication.shared.applicationState == .background && reconnectCount < 4 {
 //            self.tryReconnect(central, to: peripheral)
@@ -291,11 +302,14 @@ extension TagManager: CBCentralManagerDelegate {
         
         if central.state != .poweredOn {
             LogHelper.logError(err: "Central is not powered on")
-        } else {
-            let permission = checkPermission()
-            if let uuidService = UUIDService, permission == .allowedAlways {
-                centralManager.scanForPeripherals(withServices: [uuidService], options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
+            if isConnected() {
+                connected = false
+                delegate?.didDisconnect()
+                delegate?.didChangeStatus(state: .disconnected, deviceId: "")
             }
+        } else if checkPermission() == .allowedAlways {
+            
+            centralManager.scanForPeripherals(withServices: UUIDService, options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
         }
     }
 }

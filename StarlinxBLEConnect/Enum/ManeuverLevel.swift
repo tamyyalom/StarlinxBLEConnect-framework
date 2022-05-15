@@ -13,7 +13,7 @@ enum ManeuverLevelEnum : Int, CaseIterable, Codable {
     case AGGRESSIVE
     case DNAGEROUS
     
-    var levelColor: UIColor {
-        return UIColor.green
-    }
+//    var levelColor: UIColor {
+//        return UIColor.green
+//    }
 }
