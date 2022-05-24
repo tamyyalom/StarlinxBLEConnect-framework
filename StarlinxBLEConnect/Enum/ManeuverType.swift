@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum ManeuverType: Int, CaseIterable, CustomStringConvertible, Codable, RawRepresentable {
+enum ManeuverType: Int, CaseIterable, Codable, RawRepresentable {
 
     case accelerate
     case breaking

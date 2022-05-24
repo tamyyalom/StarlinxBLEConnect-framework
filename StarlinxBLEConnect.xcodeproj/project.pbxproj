@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940776122831810A00B63F1C /* StarlinxBLEConnect.docc in Sources */ = {isa = PBXBuildFile; fileRef = 940775FF2831810900B63F1C /* StarlinxBLEConnect.docc */; };
-		940776132831810A00B63F1C /* SafetyIncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776012831810900B63F1C /* SafetyIncomingMessage.swift */; };
-		940776142831810A00B63F1C /* GlobalFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776022831810900B63F1C /* GlobalFieldsModel.swift */; };
-		940776152831810A00B63F1C /* BlackBoxIncomingMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776032831810900B63F1C /* BlackBoxIncomingMsg.swift */; };
-		940776162831810A00B63F1C /* WelcomeMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776042831810900B63F1C /* WelcomeMsg.swift */; };
-		940776172831810A00B63F1C /* EndTripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776052831810900B63F1C /* EndTripModel.swift */; };
-		940776182831810A00B63F1C /* UUIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776062831810900B63F1C /* UUIDModel.swift */; };
-		940776192831810A00B63F1C /* StarlinxBLEConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 940776072831810900B63F1C /* StarlinxBLEConnect.h */; };
-		9407761A2831810A00B63F1C /* UpdateTagVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776082831810900B63F1C /* UpdateTagVersion.swift */; };
-		9407761B2831810A00B63F1C /* ManeuverLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407760A2831810900B63F1C /* ManeuverLevel.swift */; };
-		9407761C2831810A00B63F1C /* CommunicationMessagesTypesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407760B2831810900B63F1C /* CommunicationMessagesTypesEnum.swift */; };
-		9407761D2831810A00B63F1C /* ManeuverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407760C2831810900B63F1C /* ManeuverType.swift */; };
-		9407761E2831810A00B63F1C /* StarlinkDeviceActionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407760D2831810900B63F1C /* StarlinkDeviceActionEnum.swift */; };
-		9407761F2831810A00B63F1C /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407760E2831810900B63F1C /* LogHelper.swift */; };
-		940776202831810A00B63F1C /* TagManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407760F2831810A00B63F1C /* TagManager.swift */; };
-		940776212831810A00B63F1C /* DiscoveredPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776102831810A00B63F1C /* DiscoveredPeripheral.swift */; };
-		940776222831810A00B63F1C /* TagManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940776112831810A00B63F1C /* TagManagerProtocol.swift */; };
+		9467B97C283CF8AB00E608DD /* StarlinxBLEConnect.docc in Sources */ = {isa = PBXBuildFile; fileRef = 9467B95F283CF8AA00E608DD /* StarlinxBLEConnect.docc */; };
+		9467B97D283CF8AB00E608DD /* SensorConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B961283CF8AA00E608DD /* SensorConstans.swift */; };
+		9467B97E283CF8AB00E608DD /* NotificationsNameEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B962283CF8AA00E608DD /* NotificationsNameEx.swift */; };
+		9467B97F283CF8AB00E608DD /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B963283CF8AA00E608DD /* LogHelper.swift */; };
+		9467B980283CF8AB00E608DD /* TagEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B965283CF8AA00E608DD /* TagEventsManager.swift */; };
+		9467B981283CF8AB00E608DD /* SensonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B966283CF8AA00E608DD /* SensonUtils.swift */; };
+		9467B982283CF8AB00E608DD /* OBGEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B967283CF8AA00E608DD /* OBGEventsManager.swift */; };
+		9467B983283CF8AB00E608DD /* SensorEventsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B968283CF8AA00E608DD /* SensorEventsProtocol.swift */; };
+		9467B984283CF8AB00E608DD /* BaseSensorEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B969283CF8AA00E608DD /* BaseSensorEvents.swift */; };
+		9467B985283CF8AB00E608DD /* SafetyIncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B96B283CF8AA00E608DD /* SafetyIncomingMessage.swift */; };
+		9467B986283CF8AB00E608DD /* GlobalFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B96C283CF8AA00E608DD /* GlobalFieldsModel.swift */; };
+		9467B987283CF8AB00E608DD /* BlackBoxIncomingMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B96D283CF8AA00E608DD /* BlackBoxIncomingMsg.swift */; };
+		9467B988283CF8AB00E608DD /* WelcomeMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B96E283CF8AA00E608DD /* WelcomeMsg.swift */; };
+		9467B989283CF8AB00E608DD /* EndTripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B96F283CF8AA00E608DD /* EndTripModel.swift */; };
+		9467B98A283CF8AB00E608DD /* UUIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B970283CF8AA00E608DD /* UUIDModel.swift */; };
+		9467B98B283CF8AB00E608DD /* UpdateTagVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B972283CF8AA00E608DD /* UpdateTagVersion.swift */; };
+		9467B98C283CF8AB00E608DD /* BLEConnectedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B973283CF8AA00E608DD /* BLEConnectedManager.swift */; };
+		9467B98D283CF8AB00E608DD /* DiscoveredPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B974283CF8AA00E608DD /* DiscoveredPeripheral.swift */; };
+		9467B98E283CF8AB00E608DD /* BLEConnectedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B975283CF8AA00E608DD /* BLEConnectedDelegate.swift */; };
+		9467B98F283CF8AB00E608DD /* ManeuverLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B977283CF8AA00E608DD /* ManeuverLevel.swift */; };
+		9467B990283CF8AB00E608DD /* CommunicationMessagesTypesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B978283CF8AA00E608DD /* CommunicationMessagesTypesEnum.swift */; };
+		9467B991283CF8AB00E608DD /* ManeuverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B979283CF8AA00E608DD /* ManeuverType.swift */; };
+		9467B992283CF8AB00E608DD /* StarlinkDeviceActionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B97A283CF8AA00E608DD /* StarlinkDeviceActionEnum.swift */; };
+		9467B993283CF8AB00E608DD /* StarlinxBLEConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 9467B97B283CF8AB00E608DD /* StarlinxBLEConnect.h */; };
 		94D094D02780D36F005373BD /* StarlinxBLEConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D094C52780D36F005373BD /* StarlinxBLEConnect.framework */; };
 		94D094D52780D36F005373BD /* StarlinxBLEConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D094D42780D36F005373BD /* StarlinxBLEConnectTests.swift */; };
 		94D094FC2780DCFB005373BD /* NordicDFU in Frameworks */ = {isa = PBXBuildFile; productRef = 94D094FB2780DCFB005373BD /* NordicDFU */; };
@@ -41,23 +48,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		940775FF2831810900B63F1C /* StarlinxBLEConnect.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StarlinxBLEConnect.docc; sourceTree = "<group>"; };
-		940776012831810900B63F1C /* SafetyIncomingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyIncomingMessage.swift; sourceTree = "<group>"; };
-		940776022831810900B63F1C /* GlobalFieldsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFieldsModel.swift; sourceTree = "<group>"; };
-		940776032831810900B63F1C /* BlackBoxIncomingMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackBoxIncomingMsg.swift; sourceTree = "<group>"; };
-		940776042831810900B63F1C /* WelcomeMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeMsg.swift; sourceTree = "<group>"; };
-		940776052831810900B63F1C /* EndTripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTripModel.swift; sourceTree = "<group>"; };
-		940776062831810900B63F1C /* UUIDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDModel.swift; sourceTree = "<group>"; };
-		940776072831810900B63F1C /* StarlinxBLEConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarlinxBLEConnect.h; sourceTree = "<group>"; };
-		940776082831810900B63F1C /* UpdateTagVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTagVersion.swift; sourceTree = "<group>"; };
-		9407760A2831810900B63F1C /* ManeuverLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManeuverLevel.swift; sourceTree = "<group>"; };
-		9407760B2831810900B63F1C /* CommunicationMessagesTypesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationMessagesTypesEnum.swift; sourceTree = "<group>"; };
-		9407760C2831810900B63F1C /* ManeuverType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManeuverType.swift; sourceTree = "<group>"; };
-		9407760D2831810900B63F1C /* StarlinkDeviceActionEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarlinkDeviceActionEnum.swift; sourceTree = "<group>"; };
-		9407760E2831810900B63F1C /* LogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
-		9407760F2831810A00B63F1C /* TagManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagManager.swift; sourceTree = "<group>"; };
-		940776102831810A00B63F1C /* DiscoveredPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredPeripheral.swift; sourceTree = "<group>"; };
-		940776112831810A00B63F1C /* TagManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagManagerProtocol.swift; sourceTree = "<group>"; };
+		9467B95F283CF8AA00E608DD /* StarlinxBLEConnect.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StarlinxBLEConnect.docc; sourceTree = "<group>"; };
+		9467B961283CF8AA00E608DD /* SensorConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorConstans.swift; sourceTree = "<group>"; };
+		9467B962283CF8AA00E608DD /* NotificationsNameEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsNameEx.swift; sourceTree = "<group>"; };
+		9467B963283CF8AA00E608DD /* LogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
+		9467B965283CF8AA00E608DD /* TagEventsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagEventsManager.swift; sourceTree = "<group>"; };
+		9467B966283CF8AA00E608DD /* SensonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensonUtils.swift; sourceTree = "<group>"; };
+		9467B967283CF8AA00E608DD /* OBGEventsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBGEventsManager.swift; sourceTree = "<group>"; };
+		9467B968283CF8AA00E608DD /* SensorEventsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorEventsProtocol.swift; sourceTree = "<group>"; };
+		9467B969283CF8AA00E608DD /* BaseSensorEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSensorEvents.swift; sourceTree = "<group>"; };
+		9467B96B283CF8AA00E608DD /* SafetyIncomingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyIncomingMessage.swift; sourceTree = "<group>"; };
+		9467B96C283CF8AA00E608DD /* GlobalFieldsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFieldsModel.swift; sourceTree = "<group>"; };
+		9467B96D283CF8AA00E608DD /* BlackBoxIncomingMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackBoxIncomingMsg.swift; sourceTree = "<group>"; };
+		9467B96E283CF8AA00E608DD /* WelcomeMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeMsg.swift; sourceTree = "<group>"; };
+		9467B96F283CF8AA00E608DD /* EndTripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTripModel.swift; sourceTree = "<group>"; };
+		9467B970283CF8AA00E608DD /* UUIDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDModel.swift; sourceTree = "<group>"; };
+		9467B972283CF8AA00E608DD /* UpdateTagVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTagVersion.swift; sourceTree = "<group>"; };
+		9467B973283CF8AA00E608DD /* BLEConnectedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEConnectedManager.swift; sourceTree = "<group>"; };
+		9467B974283CF8AA00E608DD /* DiscoveredPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredPeripheral.swift; sourceTree = "<group>"; };
+		9467B975283CF8AA00E608DD /* BLEConnectedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEConnectedDelegate.swift; sourceTree = "<group>"; };
+		9467B977283CF8AA00E608DD /* ManeuverLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManeuverLevel.swift; sourceTree = "<group>"; };
+		9467B978283CF8AA00E608DD /* CommunicationMessagesTypesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationMessagesTypesEnum.swift; sourceTree = "<group>"; };
+		9467B979283CF8AA00E608DD /* ManeuverType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManeuverType.swift; sourceTree = "<group>"; };
+		9467B97A283CF8AA00E608DD /* StarlinkDeviceActionEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarlinkDeviceActionEnum.swift; sourceTree = "<group>"; };
+		9467B97B283CF8AB00E608DD /* StarlinxBLEConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarlinxBLEConnect.h; sourceTree = "<group>"; };
 		94D094C52780D36F005373BD /* StarlinxBLEConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarlinxBLEConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D094CF2780D36F005373BD /* StarlinxBLEConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarlinxBLEConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D094D42780D36F005373BD /* StarlinxBLEConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarlinxBLEConnectTests.swift; sourceTree = "<group>"; };
@@ -84,39 +98,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		940776002831810900B63F1C /* Model */ = {
+		9467B960283CF8AA00E608DD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				940776012831810900B63F1C /* SafetyIncomingMessage.swift */,
-				940776022831810900B63F1C /* GlobalFieldsModel.swift */,
-				940776032831810900B63F1C /* BlackBoxIncomingMsg.swift */,
-				940776042831810900B63F1C /* WelcomeMsg.swift */,
-				940776052831810900B63F1C /* EndTripModel.swift */,
-				940776062831810900B63F1C /* UUIDModel.swift */,
+				9467B961283CF8AA00E608DD /* SensorConstans.swift */,
+				9467B962283CF8AA00E608DD /* NotificationsNameEx.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9467B964283CF8AA00E608DD /* EventsManagers */ = {
+			isa = PBXGroup;
+			children = (
+				9467B965283CF8AA00E608DD /* TagEventsManager.swift */,
+				9467B966283CF8AA00E608DD /* SensonUtils.swift */,
+				9467B967283CF8AA00E608DD /* OBGEventsManager.swift */,
+				9467B968283CF8AA00E608DD /* SensorEventsProtocol.swift */,
+				9467B969283CF8AA00E608DD /* BaseSensorEvents.swift */,
+			);
+			path = EventsManagers;
+			sourceTree = "<group>";
+		};
+		9467B96A283CF8AA00E608DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9467B96B283CF8AA00E608DD /* SafetyIncomingMessage.swift */,
+				9467B96C283CF8AA00E608DD /* GlobalFieldsModel.swift */,
+				9467B96D283CF8AA00E608DD /* BlackBoxIncomingMsg.swift */,
+				9467B96E283CF8AA00E608DD /* WelcomeMsg.swift */,
+				9467B96F283CF8AA00E608DD /* EndTripModel.swift */,
+				9467B970283CF8AA00E608DD /* UUIDModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		940776092831810900B63F1C /* Enum */ = {
+		9467B971283CF8AA00E608DD /* BLE */ = {
 			isa = PBXGroup;
 			children = (
-				9407760A2831810900B63F1C /* ManeuverLevel.swift */,
-				9407760B2831810900B63F1C /* CommunicationMessagesTypesEnum.swift */,
-				9407760C2831810900B63F1C /* ManeuverType.swift */,
-				9407760D2831810900B63F1C /* StarlinkDeviceActionEnum.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
-		940776232831818400B63F1C /* BLE */ = {
-			isa = PBXGroup;
-			children = (
-				940776102831810A00B63F1C /* DiscoveredPeripheral.swift */,
-				9407760F2831810A00B63F1C /* TagManager.swift */,
-				940776112831810A00B63F1C /* TagManagerProtocol.swift */,
-				940776082831810900B63F1C /* UpdateTagVersion.swift */,
+				9467B972283CF8AA00E608DD /* UpdateTagVersion.swift */,
+				9467B973283CF8AA00E608DD /* BLEConnectedManager.swift */,
+				9467B974283CF8AA00E608DD /* DiscoveredPeripheral.swift */,
+				9467B975283CF8AA00E608DD /* BLEConnectedDelegate.swift */,
 			);
 			path = BLE;
+			sourceTree = "<group>";
+		};
+		9467B976283CF8AA00E608DD /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9467B977283CF8AA00E608DD /* ManeuverLevel.swift */,
+				9467B978283CF8AA00E608DD /* CommunicationMessagesTypesEnum.swift */,
+				9467B979283CF8AA00E608DD /* ManeuverType.swift */,
+				9467B97A283CF8AA00E608DD /* StarlinkDeviceActionEnum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		94D094BB2780D36F005373BD = {
@@ -141,12 +176,14 @@
 		94D094C72780D36F005373BD /* StarlinxBLEConnect */ = {
 			isa = PBXGroup;
 			children = (
-				940776232831818400B63F1C /* BLE */,
-				940776092831810900B63F1C /* Enum */,
-				9407760E2831810900B63F1C /* LogHelper.swift */,
-				940776002831810900B63F1C /* Model */,
-				940775FF2831810900B63F1C /* StarlinxBLEConnect.docc */,
-				940776072831810900B63F1C /* StarlinxBLEConnect.h */,
+				9467B971283CF8AA00E608DD /* BLE */,
+				9467B976283CF8AA00E608DD /* Enum */,
+				9467B964283CF8AA00E608DD /* EventsManagers */,
+				9467B963283CF8AA00E608DD /* LogHelper.swift */,
+				9467B96A283CF8AA00E608DD /* Model */,
+				9467B95F283CF8AA00E608DD /* StarlinxBLEConnect.docc */,
+				9467B97B283CF8AB00E608DD /* StarlinxBLEConnect.h */,
+				9467B960283CF8AA00E608DD /* Utils */,
 			);
 			path = StarlinxBLEConnect;
 			sourceTree = "<group>";
@@ -173,7 +210,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				940776192831810A00B63F1C /* StarlinxBLEConnect.h in Headers */,
+				9467B993283CF8AB00E608DD /* StarlinxBLEConnect.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,22 +321,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9407761E2831810A00B63F1C /* StarlinkDeviceActionEnum.swift in Sources */,
-				940776212831810A00B63F1C /* DiscoveredPeripheral.swift in Sources */,
-				940776142831810A00B63F1C /* GlobalFieldsModel.swift in Sources */,
-				940776202831810A00B63F1C /* TagManager.swift in Sources */,
-				9407761D2831810A00B63F1C /* ManeuverType.swift in Sources */,
-				940776182831810A00B63F1C /* UUIDModel.swift in Sources */,
-				940776172831810A00B63F1C /* EndTripModel.swift in Sources */,
-				9407761B2831810A00B63F1C /* ManeuverLevel.swift in Sources */,
-				9407761C2831810A00B63F1C /* CommunicationMessagesTypesEnum.swift in Sources */,
-				940776222831810A00B63F1C /* TagManagerProtocol.swift in Sources */,
-				940776132831810A00B63F1C /* SafetyIncomingMessage.swift in Sources */,
-				940776162831810A00B63F1C /* WelcomeMsg.swift in Sources */,
-				9407761F2831810A00B63F1C /* LogHelper.swift in Sources */,
-				940776122831810A00B63F1C /* StarlinxBLEConnect.docc in Sources */,
-				9407761A2831810A00B63F1C /* UpdateTagVersion.swift in Sources */,
-				940776152831810A00B63F1C /* BlackBoxIncomingMsg.swift in Sources */,
+				9467B989283CF8AB00E608DD /* EndTripModel.swift in Sources */,
+				9467B97D283CF8AB00E608DD /* SensorConstans.swift in Sources */,
+				9467B98B283CF8AB00E608DD /* UpdateTagVersion.swift in Sources */,
+				9467B987283CF8AB00E608DD /* BlackBoxIncomingMsg.swift in Sources */,
+				9467B98E283CF8AB00E608DD /* BLEConnectedDelegate.swift in Sources */,
+				9467B984283CF8AB00E608DD /* BaseSensorEvents.swift in Sources */,
+				9467B98D283CF8AB00E608DD /* DiscoveredPeripheral.swift in Sources */,
+				9467B981283CF8AB00E608DD /* SensonUtils.swift in Sources */,
+				9467B986283CF8AB00E608DD /* GlobalFieldsModel.swift in Sources */,
+				9467B98F283CF8AB00E608DD /* ManeuverLevel.swift in Sources */,
+				9467B985283CF8AB00E608DD /* SafetyIncomingMessage.swift in Sources */,
+				9467B992283CF8AB00E608DD /* StarlinkDeviceActionEnum.swift in Sources */,
+				9467B97F283CF8AB00E608DD /* LogHelper.swift in Sources */,
+				9467B990283CF8AB00E608DD /* CommunicationMessagesTypesEnum.swift in Sources */,
+				9467B991283CF8AB00E608DD /* ManeuverType.swift in Sources */,
+				9467B98A283CF8AB00E608DD /* UUIDModel.swift in Sources */,
+				9467B982283CF8AB00E608DD /* OBGEventsManager.swift in Sources */,
+				9467B97E283CF8AB00E608DD /* NotificationsNameEx.swift in Sources */,
+				9467B97C283CF8AB00E608DD /* StarlinxBLEConnect.docc in Sources */,
+				9467B980283CF8AB00E608DD /* TagEventsManager.swift in Sources */,
+				9467B983283CF8AB00E608DD /* SensorEventsProtocol.swift in Sources */,
+				9467B988283CF8AB00E608DD /* WelcomeMsg.swift in Sources */,
+				9467B98C283CF8AB00E608DD /* BLEConnectedManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

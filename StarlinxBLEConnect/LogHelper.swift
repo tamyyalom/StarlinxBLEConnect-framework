@@ -8,13 +8,13 @@
 import Foundation
 import OSLog
 
-//@available(iOS 14.0, *)
-//extension Logger {
-//    private static var subsystem = Bundle.main.bundleIdentifier!
-//
-//    /// Logs the view cycles like viewDidLoad.
-//    static let viewCycle = Logger(subsystem: subsystem, category: "viewcycle")
-//}
+@available(iOS 14.0, *)
+extension Logger {
+    private static var subsystem = Bundle.main.bundleIdentifier!
+
+    /// Logs the view cycles like viewDidLoad.
+    static let viewCycle = Logger(subsystem: subsystem, category: "viewcycle")
+}
 
 public struct LogHelper {
     //MARK: - LOG
