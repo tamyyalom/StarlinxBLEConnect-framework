@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-StarlinxBLEConnect-universal in StarlinxBLEConnect, no dependencies

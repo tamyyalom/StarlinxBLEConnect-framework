@@ -1,0 +1,4 @@
+framework module StarlinxBLEConnect {
+  header "StarlinxBLEConnect-Swift.h"
+  requires objc
+}
