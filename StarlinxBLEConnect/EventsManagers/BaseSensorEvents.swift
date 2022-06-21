@@ -98,7 +98,7 @@ class BaseSensorEvents {
 //    }
     
     func createSafetyIncomingMessage(res : SafetyIncomingMessage) {
-        LogHelper.logError(err: "sensor createSafetyIncomingMessage for: \(res.mManeuverType?.rawValue)")
+        LogHelper.logError(err: "sensor createSafetyIncomingMessage for: \(String(describing: res.mManeuverType?.rawValue))")
         
         delegate?.sensorManeuverMsg(dataModel: res)
     }

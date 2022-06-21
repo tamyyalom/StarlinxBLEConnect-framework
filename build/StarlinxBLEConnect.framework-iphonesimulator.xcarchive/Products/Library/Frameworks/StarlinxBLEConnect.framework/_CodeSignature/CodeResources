@@ -6,67 +6,39 @@
 	<dict>
 		<key>Headers/StarlinxBLEConnect-Swift.h</key>
 		<data>
-		bCTxEkra9WU69yIg9qdLcNeMPqA=
-		</data>
-		<key>Headers/StarlinxBLEConnect.h</key>
-		<data>
-		P9Y2D10leDp2P153fN4QquVcNJM=
+		0RJhSv7p0u80HNKLb2/bqusYcRw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cyOo+UrOy2CERSy4BZC27JctF4o=
+		dp70REPUc734T3sKagw6lfE9LEY=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		9q7IZWWWw/sYN7XCe99mXhF+wTk=
+		J2DRTl3KiouOG8ENC1eFvmNn/Zk=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7ks2dDS2+N8yv5wdBA9uP0gPnAI=
+		mcrmidPb9TEBCP47optxsuhZftc=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		M69KGCSTC5Z9Hhj/F7LcAVx/9vA=
-		</data>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		9q7IZWWWw/sYN7XCe99mXhF+wTk=
-		</data>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		7ks2dDS2+N8yv5wdBA9uP0gPnAI=
-		</data>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		M69KGCSTC5Z9Hhj/F7LcAVx/9vA=
+		LvsWxf3Q3Vql6rzx9O0Q9sg6y44=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RNVa/pKs7OrFcyJU0kxHR70z0Es=
+		LD3/y6rZpBvBUWlYf1eh5vRmOhs=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3U5kVqIZUnmOMXK12H+nwCWq8Ac=
+		xsWq180/33HjDRJixD6iY/L4EW4=
 		</data>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		VHO3T4L/z7sa30l0M3Hg+VA6XaM=
-		</data>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		RNVa/pKs7OrFcyJU0kxHR70z0Es=
-		</data>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		3U5kVqIZUnmOMXK12H+nwCWq8Ac=
-		</data>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		VHO3T4L/z7sa30l0M3Hg+VA6XaM=
+		t/UJUvzuUqESiO9pUlTxUhp1rj4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		w25IO2ZrvMH7gnib85UGMleBUds=
+		BdDJl7VT9K9eMLvn7hHVLoH1OEQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,105 +47,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SmXlg6qcytd9ad7d8R0JQ+JuaGswDjSaudsM/aLVnOU=
-			</data>
-		</dict>
-		<key>Headers/StarlinxBLEConnect.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4l/jaExhKdL3LOzs1PpUQ/kGxv63tNQrfBYFcjRMIE0=
+			+FtbwwTgMuWGzb3drZ63OJE9e4g4lFv8sSzgdi28HkE=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QCL6Vq735dNHt2dvu/BlAaT3XhzbidDixmsF9vZZbvk=
+			UqE7S5T6H21VoSZxeEmmdQQqPrr5c3CTlDyQglBp4Xg=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dW64o5Hhah6q4qx7jGawHWpsh47NZUjcp9srZ9Yer3U=
+			YMNrtKtlAZ3ldhZm78ZEzd6Rv6JQ40xFnlK/7ASybvI=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hPfCXTBRPXC4w1dF7YqI3zjK0MOpkm6y9sz9mrPKKQc=
-			</data>
-		</dict>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QCL6Vq735dNHt2dvu/BlAaT3XhzbidDixmsF9vZZbvk=
-			</data>
-		</dict>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dW64o5Hhah6q4qx7jGawHWpsh47NZUjcp9srZ9Yer3U=
-			</data>
-		</dict>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hPfCXTBRPXC4w1dF7YqI3zjK0MOpkm6y9sz9mrPKKQc=
+			ZXFuRi3V86ir4ySIe43bimKIORjBk+NCmgi3IiXEVRc=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CgFrJtC01cWR9wHemtK5xrLwwZhQ++rOg0SprYC9oiI=
+			Xn0UIeuFNTXgcCi95PuzAzo8Q6jAfHzbjNREpt9JOoc=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5kwl6emoO/UKSa+WkBCp/OZIuejBKlAQqGcbo6vLrUg=
+			yg/haYHly5wxc0YerkFMNeSB6Y/lt/Gl6W1SE2ibIr8=
 			</data>
 		</dict>
 		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			z5XmvKOc+tjZep7y97XDQupcruYpgqwN+24jUOOIpbY=
-			</data>
-		</dict>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CgFrJtC01cWR9wHemtK5xrLwwZhQ++rOg0SprYC9oiI=
-			</data>
-		</dict>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			5kwl6emoO/UKSa+WkBCp/OZIuejBKlAQqGcbo6vLrUg=
-			</data>
-		</dict>
-		<key>Modules/StarlinxBLEConnect.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			z5XmvKOc+tjZep7y97XDQupcruYpgqwN+24jUOOIpbY=
+			w/Z2pDv7X/MnK+0Rz0sTCM6BHcEtH14fRBTG5n7dN+k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Lo3+YSZ6WEzNiw0bV2A687nvObqhBwLAHM656/wy2E=
+			oJwR5DyyyqPfQBmUzhjQxqkq9104jrKKZI3rH09PNhY=
 			</data>
 		</dict>
 	</dict>
